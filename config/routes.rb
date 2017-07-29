@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   		get "dashboard"
   	end
   end
-  		
+
   root 'challenges#index'
   post '/short_url' , to: "challenges#short_url"
+  get '/:search', to: "challenges#my_link"
 
 end

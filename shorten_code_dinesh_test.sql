@@ -54,8 +54,9 @@ CREATE TABLE `challenges` (
   `count` int(11) DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
+  `bit_code` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +65,7 @@ CREATE TABLE `challenges` (
 
 LOCK TABLES `challenges` WRITE;
 /*!40000 ALTER TABLE `challenges` DISABLE KEYS */;
-INSERT INTO `challenges` VALUES (3,'www.google.com',9,'2017-07-29 11:47:31','2017-07-29 12:22:08'),(4,'asfdsaf.com',16,'2017-07-29 11:49:59','2017-07-29 12:05:11'),(5,'adfsasdf.com',2,'2017-07-29 12:00:16','2017-07-29 12:21:19'),(6,'sdfsdfsds.com',1,'2017-07-29 12:05:34','2017-07-29 12:05:34'),(7,'yahoo.com',1,'2017-07-29 12:06:44','2017-07-29 12:06:44'),(8,'sgfdsgfdg.com',1,'2017-07-29 12:12:54','2017-07-29 12:12:54'),(9,'sdfgsdg.com',1,'2017-07-29 12:13:20','2017-07-29 12:13:20'),(10,'kdshfkhds.com',1,'2017-07-29 12:17:49','2017-07-29 12:17:49'),(11,'java.com',1,'2017-07-29 12:19:32','2017-07-29 12:19:32'),(12,'{:placeholder=>\"Search..\"}',1,'2017-07-29 12:20:54','2017-07-29 12:20:54');
+INSERT INTO `challenges` VALUES (15,'www.google.com',6,'2017-07-29 13:10:08','2017-07-29 13:24:11','dz'),(16,'yahoo.com',1,'2017-07-29 13:19:40','2017-07-29 13:19:40','y'),(18,'bitly.com/',3,'2017-07-29 13:21:12','2017-07-29 13:21:54','lfhs'),(19,'bitly.com',1,'2017-07-29 13:22:47','2017-07-29 13:22:47','fvrg');
 /*!40000 ALTER TABLE `challenges` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +88,7 @@ CREATE TABLE `schema_migrations` (
 
 LOCK TABLES `schema_migrations` WRITE;
 /*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
-INSERT INTO `schema_migrations` VALUES ('20170729102552');
+INSERT INTO `schema_migrations` VALUES ('20170729102552'),('20170729125549');
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -100,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-29 18:02:02
+-- Dump completed on 2017-07-29 18:57:31

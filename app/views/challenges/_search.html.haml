@@ -1,2 +1,4 @@
-%p Your shorten url is :
+%p Your url is :
 %p= link_to @challenge.url , "http://#{@challenge.url}"  , :target => :blank
+%p Your shorten url is :
+%p= link_to "#{root_url}#{@challenge.bit_code}" , "#{root_url}#{@challenge.bit_code}"  , :target => :blank
