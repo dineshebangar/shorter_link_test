@@ -1,0 +1,6 @@
+%table{:class => "table table-hover"}
+  %tr
+    %th URL List
+  - @challenges.each do |challenge|
+    %tr
+      %td= link_to challenge.url , "http://#{challenge.url}"  , :target => :blank 
