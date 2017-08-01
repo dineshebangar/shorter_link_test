@@ -14,12 +14,13 @@ class ChallengesController < ApplicationController
 	# creating shorten url 
 
 	def short_url
-		@challenge = Challenge.find_by_url( params[:search])
+		url = params[:search].gsub("http://" , "").gsub("https://" , "")
+		@challenge = Challenge.find_by_url( url)
 		if @challenge.present? # checking url already present in database or not ?
 			@challenge.count =  @challenge.count + 1 # adding url hit count
-		else 
-			bit_code = (0..10).map { ('a'..'z').to_a[rand(50)] }.join	 # creating bit code
-			@challenge = Challenge.new(:url=>  params[:search], :count => 1 , :bit_code => bit_code)
+		else
+		  bit_code = Challenge.get_bit_code  # creating bit code
+			@challenge = Challenge.new(:url=>  url, :count => 1 , :bit_code => bit_code)
 		end
 		@challenge.save # saving record
 	end
