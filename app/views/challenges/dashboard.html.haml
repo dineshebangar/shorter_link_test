@@ -1,8 +1,8 @@
 %table{:class => "table table-hover"}
   %tr
-    %th URL List
-  - @challenges.each do |challenge|
+    %th URL List :
+  - @challenges.each_with_index do |challenge, i|
     %tr
       %td
-        =# link_to challenge.url , "http://#{challenge.url}"  , :target => :blank 
+        = "#{i + 1})"
         = link_to "#{root_url}#{challenge.bit_code}" , "#{root_url}#{challenge.bit_code}"  , :target => :blank
